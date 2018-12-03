@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/adamcrampton/alexa-steam-store/issues"
   },
-  "homepage": "https://github.com/adamcrampton/alexa-steam-store#readme"
+  "homepage": "https://github.com/adamcrampton/alexa-steam-store#readme",
+  "dependencies": {
+    "aws-cli": "0.0.2"
+  }
 }
