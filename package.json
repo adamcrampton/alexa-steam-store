@@ -1,0 +1,20 @@
+{
+  "name": "alexa-steam-store",
+  "version": "1.0.0",
+  "description": "Experimental scraping of Steam data to use with an Alexa skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamcrampton/alexa-steam-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamcrampton/alexa-steam-store/issues"
+  },
+  "homepage": "https://github.com/adamcrampton/alexa-steam-store#readme"
+}
