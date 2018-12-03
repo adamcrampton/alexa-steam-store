@@ -10,7 +10,16 @@ const url = "https://store.steampowered.com/";
 const steamScrape = function(url) {
 	rp(url)
 		.then(function(html) {
-			console.log(html);
+			const scrapeObject = $('#tab_specials_content .tab_item', html);
+			for (var i = 0; i <= scrapeObject.length; i++) {
+				console.log('**********************************');
+				console.log($(scrapeObject[i]).find('.tab_item_name').text());
+				console.log($(scrapeObject[i]).find('.discount_pct').text());
+				console.log($(scrapeObject[i]).find('.discount_original_price').text());
+				console.log($(scrapeObject[i]).find('.discount_final_price').text());;
+			}
+
+			
 		})
 		.catch(function(err) {
 			console.log("There was an error:", err);
