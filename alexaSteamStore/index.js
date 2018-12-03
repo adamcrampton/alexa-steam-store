@@ -23,7 +23,7 @@ server.listen(port, hostname, () => {
 
 // Config Alexa SDK and required libraries.
 const Alexa = require('alexa-sdk');
-const steamScrape = require('steam-scrape');
+const steamScrape = require('./steamScrape');
 
 // Define handlers.
 const handlers = {

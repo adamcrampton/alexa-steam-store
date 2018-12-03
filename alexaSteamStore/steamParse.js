@@ -2,5 +2,6 @@
 const rp = require('request-promise');
 const $ = require('cheerio');
 
-// Export module.
-module.exports = steamParse;
+const steamParse = function(url) {
+
+}
