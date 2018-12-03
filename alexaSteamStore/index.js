@@ -2,9 +2,28 @@
 // ======================
 'use strict';
 
+// Uncomment to fire up local Node server
+// ======================================
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Test Page\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+// ======================================
+
 // Config Alexa SDK and required libraries.
 const Alexa = require('alexa-sdk');
-const request = require('request-promise');
+const steamScrape = require('steam-scrape');
 
 // Define handlers.
 const handlers = {
@@ -47,19 +66,3 @@ exports.handler = function(event, context, callback) {
   alexa.registerHandlers(handlers);
   alexa.execute();
 };
-
-// Uncomment to fire up local Node server
-// const http = require('http');
-
-// const hostname = '127.0.0.1';
-// const port = 3000;
-
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Test Page\n');
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
