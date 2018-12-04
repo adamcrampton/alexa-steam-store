@@ -25,6 +25,14 @@ server.listen(port, hostname, () => {
 const Alexa = require('alexa-sdk');
 const steamScrape = require('./steamScrape');
 
+// Define scrape endpoint.
+const url = "https://store.steampowered.com/";
+
+// Scrape page and parse data - so it's useable for building speech strings.
+const processedScrape = steamScrape.scrapeIndex(url);
+
+// console.log(processedScrape);
+
 // Define handlers.
 const handlers = {
 	'LaunchRequest': function() {
