@@ -23,15 +23,14 @@ server.listen(port, hostname, () => {
 
 // Config Alexa SDK and required libraries.
 const Alexa = require('alexa-sdk');
-const steamScrape = require('./steamScrape');
 
 // Define scrape endpoint.
 const url = "https://store.steampowered.com/";
 
-// Scrape page and parse data - so it's useable for building speech strings.
-const processedScrape = steamScrape.scrapeIndex(url);
+// Scrape index page and return data plucked from the DOM using cheerio.
+const steamScrape = require('./steamScrape');
 
-// console.log(processedScrape);
+steamScrape.scrapeIndex(url);
 
 // Define handlers.
 const handlers = {
